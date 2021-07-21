@@ -1,0 +1,630 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Public Sans", sans-serif;
+}
+
+:root {
+	--dark-blue: #2d314d;
+	--lime-green: #31d35c;
+	--bright-cyan: #2bb7da;
+	--grayish-blue: #9698a6;
+	--gradient: linear-gradient(90deg, var(--lime-green), var(--bright-cyan));
+	--light-grayish-blue: #f3f4f6;
+	--light-gray: #fafafa;
+	--white: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	color: var(--dark-blue);
+	font-weight: 400;
+}
+
+h1 {
+	font-size: 2.6rem;
+}
+
+h2 {
+	font-size: 2.1rem;
+}
+
+h3 {
+	font-size: 1.2rem;
+}
+
+h4 {
+	font-size: 1.1rem;
+}
+
+p,
+span {
+	color: var(--grayish-blue);
+}
+
+p {
+	font-size: 0.9rem;
+	line-height: 1.5rem;
+}
+
+span {
+	font-size: 0.72rem;
+	font-weight: 400;
+}
+
+li {
+	list-style: none;
+	text-decoration: none;
+}
+
+.btn {
+	display: inline-block;
+	font-weight: 400;
+	font-size: 1rem;
+	padding: 13px 30px;
+	cursor: pointer;
+	background: var(--gradient);
+	color: var(--white);
+	border: none;
+	border-radius: 25px;
+}
+
+.container {
+	position: relative;
+	padding: 0 1.5rem;
+	width: 100%;
+	height: 100%;
+}
+
+/** -------------------- Header ----------------------------------------*/
+
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 1.1rem 1.5rem;
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--white);
+	align-items: center;
+	z-index: 1000;
+}
+
+header .logo {
+	display: flex;
+	height: 100%;
+	align-items: center;
+}
+
+.navigation {
+	display: none;
+}
+
+.navigation.active {
+	display: flex;
+	position: absolute;
+	top: 3.8rem;
+	left: 0;
+	margin: 20px 10%;
+	width: 80%;
+	height: 250px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 6px;
+	background: var(--white);
+	flex-direction: column;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+header ul li {
+	margin: 10px 0;
+	margin-left: 0;
+}
+
+header .request {
+	display: none;
+}
+
+header ul li a {
+	font-size: 1.14rem;
+	font-weight: 400;
+	display: inline-block;
+	color: var(--dark-blue);
+	text-decoration: none;
+}
+
+header.active {
+	justify-content: space-between;
+}
+
+header ul > li {
+	list-style: none;
+	text-decoration: none;
+	display: flex;
+}
+
+.toggle {
+	position: relative;
+	width: 25px;
+	height: 25px;
+	background: url(../images/icon-hamburger.svg);
+	background-size: 30px;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	z-index: 1000;
+}
+
+.toggle.active {
+	background: url(../images/icon-close.svg);
+	background-size: 30px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+/** -------------------- Hero section ----------------------------------------*/
+
+.hero {
+	height: 46rem;
+	margin-top: 3.8rem;
+	background: var(--light-gray);
+}
+
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	gap: 20px;
+}
+
+.hero-image {
+	background: url(../images/bg-intro-mobile.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 0;
+	max-height: 600px;
+	min-height: 355px;
+	width: 100%;
+}
+
+.hero-image .phone {
+	background: url(../images/image-mockups.png);
+	background-position: bottom;
+	background-size: cover;
+	max-height: 600px;
+	min-height: 330px;
+}
+
+/** Hero Content */
+
+.hero-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	height: 360px;
+}
+
+.hero-content h1,
+.hero-content p {
+	padding-bottom: 1.6rem;
+}
+
+/** -------------------- Why Easybank ----------------------------------------*/
+.why-easybank {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: var(--light-grayish-blue);
+	padding-top: 65px;
+	padding-bottom: 45px;
+	text-align: center;
+}
+
+.why-easybank .why {
+	padding-bottom: 1.3rem;
+}
+
+.why-easybank h2,
+.why-easybank p,
+.why-easybank h3,
+.why-easybank img {
+	margin-bottom: 1.3rem;
+}
+
+.why-easybank img {
+	height: 65px;
+}
+
+.why-easybank .features {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/** -------------------- Articles ----------------------------------------*/
+.articles {
+	background: var(--light-gray);
+	padding-top: 90px;
+	padding-bottom: 90px;
+}
+
+.articles h2 {
+	text-align: center;
+}
+
+.articles .grid {
+	width: 100%;
+	margin-top: 40px;
+	gap: 30px;
+}
+
+.article {
+	height: 450px;
+	width: 100%;
+	background: var(--white);
+	border-radius: 8px;
+}
+
+.article a {
+	cursor: pointer;
+	text-decoration: none;
+	color: var(--dark-blue);
+}
+
+.article a:hover {
+	color: var(--bright-cyan);
+}
+
+.article-image {
+	height: 45%;
+	width: 100%;
+}
+
+.article-image img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+.article-content {
+	padding: 30px;
+}
+
+.article-content p,
+.article-content h4 {
+	margin-bottom: 10px;
+}
+
+.article-content p {
+	line-height: 1.3rem;
+}
+
+.article-content h4 {
+	margin-top: 10px;
+}
+
+/** -------------------- Footer ----------------------------------------*/
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: var(--dark-blue);
+	padding: 45px 60px;
+	text-align: center;
+}
+
+footer .logo-icons {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	justify-content: center;
+}
+
+footer .logo {
+	height: 30px;
+}
+
+footer .social-icons {
+	width: 100%;
+	padding: 35px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+footer .icon {
+	height: 23px;
+}
+
+footer .footer-nav {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+footer .footer-nav li {
+	padding: 8px;
+}
+
+footer .footer-nav li a {
+	font-size: 1rem;
+	color: var(--light-gray);
+	text-decoration: none;
+}
+
+footer .request {
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+footer h5 {
+	font-size: 1rem;
+	color: var(--grayish-blue);
+	font-weight: 400;
+}
+
+/** -------------------- Media Queries ----------------------------------------*/
+@media all and (min-width: 280px) and (max-width: 320px) {
+	.hero.grid {
+		height: 58rem;
+	}
+}
+
+@media all and (min-width: 717px) and (max-width: 1023px) {
+	.container {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+
+	.hero {
+		height: auto;
+	}
+
+	.hero-image .phone {
+		min-height: 600px;
+	}
+
+	.hero-content {
+		justify-content: center;
+	}
+
+	.articles .grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+
+	.why-easybank .features {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+
+	footer {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+@media all and (min-width: 1024px) and (max-width: 1106px) {
+	.hero.grid {
+		grid-template-columns: 45% 55% !important;
+	}
+
+	.why-easybank .why {
+		margin-right: 30rem !important;
+	}
+
+	.hero-image .phone {
+		margin-left: 8rem !important;
+	}
+
+	.articles .grid {
+		gap: 10px!important;
+	}
+
+	.article {
+		padding-bottom: 120px!important;
+	}
+
+	.article-content {
+		padding: 20px !important;
+	}
+}
+
+@media all and (min-width: 1024px) {
+	h3 {
+		font-size: 1.3rem;
+	}
+	.container {
+		padding-left: 7rem;
+		padding-right: 7rem;
+	}
+
+	.btn:hover {
+		opacity: 0.8;
+	}
+
+	header {
+		padding: 0rem 7rem;
+		align-items: center;
+	}
+
+	header .request {
+		display: inline-block;
+		padding: 1rem 0;
+	}
+
+	.toggle-contain {
+		display: none;
+	}
+
+	.navigation {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 77px;
+	}
+
+	.navigation li {
+		padding: 0 18px;
+		height: 77px;
+		width: 72px;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		margin: 0;
+	}
+
+	.navigation li a {
+		font-size: 0.9rem;
+		color: var(--grayish-blue);
+	}
+
+	.navigation li a:hover {
+		color: var(--dark-blue);
+	}
+
+	.navigation li:hover {
+		cursor: pointer;
+		background: /* gradient can be an image */ var(--gradient) left bottom
+			no-repeat;
+		background-size: 100% 3.5px; /* if linear-gradient, we need to resize it */
+	}
+
+	.hero {
+		height: 33rem;
+	}
+
+	.hero.grid {
+		grid-template-columns: 40% 60%;
+		align-items: center;
+		overflow-y: visible;
+		overflow-x: clip;
+	}
+
+	.hero-image {
+		background: url(../images/bg-intro-desktop.svg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		grid-column: 2;
+		grid-row: 1;
+		padding: 0;
+		z-index: 100;
+		width: 66rem;
+		margin-top: -4.6rem;
+		margin-right: -120px;
+	}
+
+	.hero-image .phone {
+		min-height: 47rem;
+		width: 40rem;
+		margin-left: 16.1rem;
+	}
+
+	.hero-content {
+		text-align: left;
+		align-items: flex-start;
+		padding-top: 3.8rem;
+		padding-bottom: 4.6rem;
+	}
+
+	.hero-content.container {
+		padding-right: 2rem;
+	}
+
+	.why-easybank {
+		align-items: flex-start;
+		padding-top: 7rem;
+		padding-bottom: 5rem;
+		text-align: left;
+	}
+
+	.why-easybank .why {
+		margin-right: 37.5rem;
+		padding-bottom: 2.5rem;
+	}
+
+	.why-easybank .features {
+		flex-wrap: nowrap;
+	}
+
+	.why-easybank .feature {
+		padding: 1rem;
+	}
+
+	.articles h2 {
+		text-align: left;
+	}
+
+	.articles .grid {
+		grid-template-columns: repeat(4, 1fr);
+		gap: 20px;
+	}
+
+	.article {
+		height: 410px;
+		padding-bottom: 30px;
+	}
+
+	footer {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		padding: 20px 25px;
+	}
+
+	footer li a:hover {
+		cursor: pointer;
+		color: var(--lime-green);
+	}
+
+	footer .logo {
+		margin-top: 40px;
+	}
+
+	footer .social-icons {
+		padding-top: 2.2rem;
+		justify-content: center;
+	}
+
+	footer .icon {
+		cursor: pointer;
+		padding: 0 8px;
+	}
+}
+
+@media all and (min-width: 2560px) {
+	.container {
+		padding-left: 15rem;
+		padding-right: 15rem;
+	}
+
+	header {
+		padding: 0 15rem;
+	}
+
+	.hero-image {
+		width: auto;
+	}
+
+	.hero-image .phone {
+		margin: 0 auto;
+	}
+}
