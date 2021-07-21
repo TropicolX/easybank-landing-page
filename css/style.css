@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
-
 * {
 	padding: 0;
 	margin: 0;
@@ -12,7 +10,7 @@
 	--lime-green: #31d35c;
 	--bright-cyan: #2bb7da;
 	--grayish-blue: #9698a6;
-	--gradient: linear-gradient(90deg, var(--lime-green), var(--bright-cyan));
+	--gradient: linear-gradient(90deg, #31d35c, #2bb7da);
 	--light-grayish-blue: #f3f4f6;
 	--light-gray: #fafafa;
 	--white: #ffffff;
@@ -88,7 +86,7 @@ a {
 /** -------------------- nav ----------------------------------------*/
 
 nav {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -112,7 +110,7 @@ nav .logo {
 
 .navigation.active {
 	display: flex;
-	position: absolute;
+	position: fixed;
 	top: 3.8rem;
 	left: 0;
 	margin: 20px 10%;
@@ -128,7 +126,6 @@ nav .logo {
 
 nav ul li {
 	margin: 10px 0;
-	margin-left: 0;
 }
 
 nav .request {
@@ -347,7 +344,7 @@ footer .logo {
 
 footer .social-icons {
 	width: 100%;
-	padding: 35px 0;
+	padding: 35px 0px;
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
@@ -375,7 +372,6 @@ footer .footer-nav li a {
 }
 
 footer .request {
-	margin-top: 25px;
 	margin-bottom: 25px;
 }
 
@@ -479,6 +475,11 @@ footer .footer-text {
 		display: inline-block;
 	}
 
+	.request:hover {
+		display: inline-block;
+		color: var(--white);
+	}
+
 	.toggle-contain {
 		display: none;
 	}
@@ -523,8 +524,6 @@ footer .footer-text {
 	.hero.grid {
 		grid-template-columns: 40% 60%;
 		align-items: center;
-		overflow-y: visible;
-		overflow-x: clip;
 	}
 
 	.hero-image {
