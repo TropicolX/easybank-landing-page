@@ -382,7 +382,7 @@ footer h5 {
 }
 
 /** -------------------- Media Queries ----------------------------------------*/
-@media all and (min-width: 280px) and (max-width: 320px) {
+@media all and (min-width: 200px) and (max-width: 374px) {
 	.hero.grid {
 		height: 58rem;
 	}
@@ -610,7 +610,7 @@ footer h5 {
 	}
 }
 
-@media all and (min-width: 2560px) {
+@media all and (min-width: 1500px) {
 	.container {
 		padding-left: 15rem;
 		padding-right: 15rem;
