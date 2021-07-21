@@ -379,7 +379,7 @@ footer .request {
 	margin-bottom: 25px;
 }
 
-footer h5 {
+footer .footer-text {
 	font-size: 1rem;
 	color: var(--grayish-blue);
 	font-weight: 400;
