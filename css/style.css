@@ -174,6 +174,7 @@ nav ul > li {
 .hero {
 	height: 46rem;
 	margin-top: 3.8rem;
+	overflow-x: clip;
 	background: var(--light-gray);
 }
 
@@ -441,11 +442,11 @@ footer .footer-text {
 	}
 
 	.articles .grid {
-		gap: 10px!important;
+		gap: 10px !important;
 	}
 
 	.article {
-		padding-bottom: 120px!important;
+		padding-bottom: 120px !important;
 	}
 
 	.article-content {
